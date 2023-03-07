@@ -19,4 +19,4 @@ async function main() {
       process.exit(1);
     });
     
-// RUN : yarn hardhat run .\scripts\deploy.js --network Yuma
+// RUN : yarn hardhat run .\scripts\deploy.js --network yuma
