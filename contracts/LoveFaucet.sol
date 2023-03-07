@@ -18,7 +18,7 @@ contract LoveFaucet is Ownable, ReentrancyGuard {
     // Store each address last airdrop time
     mapping (address => uint) usersLastTime;
 
-    // Check the balance of the smartContract
+    // Check if the sender claimed in the last 24h (86400s)
     function canClaim() public view returns (bool) {
         return (block.timestamp > usersLastTime[msg.sender] + 86400);
     }
